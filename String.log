@@ -1,0 +1,52 @@
+2023-05-26T18:45:49.958-05:00  INFO 1288 --- [restartedMain] com.spring1.app.Api1Application          : Starting Api1Application using Java 17.0.7 with PID 1288 (C:\Users\NICK0\OneDrive\Documentos\Spring tools 4\workspace\api1\target\classes started by NICK0 in C:\Users\NICK0\OneDrive\Documentos\Spring tools 4\workspace\api1)
+2023-05-26T18:45:49.960-05:00  INFO 1288 --- [restartedMain] com.spring1.app.Api1Application          : No active profile set, falling back to 1 default profile: "default"
+2023-05-26T18:45:50.005-05:00  INFO 1288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-26T18:45:50.006-05:00  INFO 1288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-26T18:45:50.414-05:00  INFO 1288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-26T18:45:50.517-05:00  INFO 1288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interfaces.
+2023-05-26T18:45:50.912-05:00  INFO 1288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-26T18:45:51.261-05:00  INFO 1288 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ae4335d
+2023-05-26T18:45:51.262-05:00  INFO 1288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-26T18:45:51.298-05:00  INFO 1288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-26T18:45:51.353-05:00  INFO 1288 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-05-26T18:45:51.355-05:00  INFO 1288 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-05-26T18:45:51.496-05:00  INFO 1288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-05-26T18:45:51.647-05:00  INFO 1288 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-05-26T18:45:51.731-05:00  INFO 1288 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.33
+2023-05-26T18:45:51.876-05:00  INFO 1288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-05-26T18:45:52.201-05:00  INFO 1288 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.spring1.app.models.City (class must be instantiated by Interceptor)
+2023-05-26T18:45:52.350-05:00  INFO 1288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-26T18:45:52.352-05:00  INFO 1288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-26T18:45:52.725-05:00  INFO 1288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-26T18:45:52.879-05:00  INFO 1288 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2023-05-26T18:45:52.887-05:00  INFO 1288 --- [restartedMain] com.spring1.app.Api1Application          : Started Api1Application in 3.271 seconds (process running for 4.168)
+2023-05-26T19:00:29.858-05:00  INFO 1288 --- [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-26T19:00:29.889-05:00  INFO 1288 --- [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-26T19:00:29.918-05:00  INFO 1288 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-26T19:00:29.952-05:00  INFO 1288 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-26T19:00:31.864-05:00  INFO 15264 --- [restartedMain] com.spring1.app.Api1Application          : Starting Api1Application using Java 17.0.7 with PID 15264 (C:\Users\NICK0\OneDrive\Documentos\Spring tools 4\workspace\api1\target\classes started by NICK0 in C:\Users\NICK0\OneDrive\Documentos\Spring tools 4\workspace\api1)
+2023-05-26T19:00:31.866-05:00  INFO 15264 --- [restartedMain] com.spring1.app.Api1Application          : No active profile set, falling back to 1 default profile: "default"
+2023-05-26T19:00:31.899-05:00  INFO 15264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-26T19:00:31.899-05:00  INFO 15264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-26T19:00:32.303-05:00  INFO 15264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-26T19:00:32.412-05:00  INFO 15264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+2023-05-26T19:00:32.786-05:00  INFO 15264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-26T19:00:33.041-05:00  INFO 15264 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a8a918d
+2023-05-26T19:00:33.042-05:00  INFO 15264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-26T19:00:33.088-05:00  INFO 15264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-26T19:00:33.152-05:00  INFO 15264 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-05-26T19:00:33.155-05:00  INFO 15264 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-05-26T19:00:33.290-05:00  INFO 15264 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-05-26T19:00:33.417-05:00  INFO 15264 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-05-26T19:00:33.491-05:00  INFO 15264 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.33
+2023-05-26T19:00:33.638-05:00  INFO 15264 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-05-26T19:00:33.985-05:00  INFO 15264 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.spring1.app.models.City (class must be instantiated by Interceptor)
+2023-05-26T19:00:34.130-05:00  INFO 15264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-26T19:00:34.133-05:00  INFO 15264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-26T19:00:34.527-05:00  INFO 15264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-26T19:00:34.675-05:00  INFO 15264 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2023-05-26T19:00:34.684-05:00  INFO 15264 --- [restartedMain] com.spring1.app.Api1Application          : Started Api1Application in 3.12 seconds (process running for 3.773)
+2023-05-26T19:00:57.344-05:00  INFO 15264 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-26T19:00:57.349-05:00  INFO 15264 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-26T19:00:57.351-05:00  INFO 15264 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-26T19:00:57.357-05:00  INFO 15264 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
