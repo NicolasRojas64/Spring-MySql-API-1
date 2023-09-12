@@ -1,0 +1,210 @@
+regions:
+  # Algunas regiones no se colocaron porque simplemente no hay acceso.
+  - global
+  - us-east-1
+  - us-east-2
+  - us-west-1 
+  - us-west-2
+  - ap-northeast-2
+  - ap-northeast-1
+  - ap-southeast-1
+  - ap-southeast-2
+  - ca-central-1
+  - eu-central-1
+  - eu-west-1
+  - eu-west-2
+  - eu-west-3
+  - eu-north-1
+  - sa-east-1  
+
+feature-flags:
+  disable-deletion-protection:
+    RDSInstance: true
+    EC2Instance: true
+    CloudformationStack: true
+  force-delete-lightsail-addons: true
+
+resource-types:
+  # Don't nuke (Siempre marcan error no hay acceso a estas herramientas) 
+  # IAMSAMLProvider es necesario para los roots.
+  excludes:
+    - IAMSAMLProvider
+    - FMSPolicy
+    - FMSNotificationChannel
+    - MachineLearningEvaluation
+    - MachineLearningDataSource
+    - MachineLearningBranchPrediction
+    - MachineLearningMLModel
+    - RoboMakerSimulationJob
+    - RoboMakerDeploymentJob
+    - RoboMakerRobotApplication
+    - RoboMakerFleet  
+    - RoboMakerSimulationApplication
+    - RoboMakerRobot
+    - SESReceiptFilter
+    - SESReceiptRuleSet
+    - Budget
+
+account-blocklist:
+  - 1234567890
+accounts:
+  267693165925:
+    # don't nuke
+    filters:
+      IAMUser:
+        - sandbox_mngr
+        - spike_mngr
+      
+      IAMUserPolicyAttachment:
+        - AdministratorAccess
+
+      IAMUserAccessKey:
+        - property: UserName
+          value: "sandbox_mngr"
+        - property: UserName
+          value: "spike_mngr"
+
+      IAMLoginProfile:
+        - property: UserName
+          value: "sandbox_mngr"
+        - property: UserName
+          value: "spike_mngr"
+
+      IAMGroup:
+        - SuperAdministrador
+        - AccesCloudTrail
+
+      IAMRole:
+        - cloudwatch_logs_role
+        - lambda-cloudtrail-role
+        - type: regex
+          value: "^.*AWSReservedSSO.*$*"
+        - OrganizationAccountAccessRole
+        - lambda-SES-role
+
+      IAMUserGroupAttachment :
+        - type: glob
+          value: "sandbox_mngr -> *"
+        - type: glob
+          value: "spike_mngr -> *"         
+
+      IAMGroupPolicyAttachment: 
+      - type: glob
+        value: "SuperAdministrador -> *"
+
+      IAMPolicy:
+        - type: regex
+          value: "^.*cloudwatch_logs_role.*$*"
+        - type: regex
+          value: "^.*lambda-cloudtrail-role.*$*"
+        - type: regex
+          value: "^.*lambda-SES-role.*$*"
+
+      IAMRolePolicyAttachment:
+        - type: glob
+          value: "lambda-cloudtrail-role -> *"
+        - type: glob
+          value: "cloudwatch_logs_role -> *"
+        - type: glob
+          value: "lambda-SES-role -> *"
+        - type: glob
+          value: "AWSReservedSSO* -> *"
+        
+
+      IAMRolePolicy:
+        - property: PolicyName
+          value: "lambda-cloudtrail-role"
+        - property: PolicyName
+          value: "cloudwatch_logs_role"
+        - type: glob
+          value: "AWSReservedSSO* -> *"        
+        - type: glob
+          value: "OrganizationAccountAccessRole* -> *"
+        
+
+      LambdaFunction:
+        - CloudTrailEventProcessing
+
+      S3Object:
+        - property: Bucket
+          type: glob
+          value: "*aws-cloudtrail-logs-267693165925*"
+        - property: Bucket
+          type: glob
+          value: "sandbox-terraform-dont-delete*"
+
+      S3Bucket:
+        - property: Name
+          value: "sandbox-terraform-dont-delete"
+        - property: Name
+          type: glob
+          value: "*aws-cloudtrail-logs-267693165925*"
+
+      IAMInstanceProfile:
+        - cloudwatch_logs_role
+
+      CloudTrailTrail:
+        - registro_seguimiento_login
+        - aws-controltower-BaselineCloudTrail
+
+      CloudWatchLogsLogGroup:
+        - /aws/lambda/CloudTrailEventProcessing
+        
+      OpsWorksUserProfile:
+        - type: regex
+          value: "^.*sandbox_mngr.*$*"
+        - type: regex
+          value: "^.*spike_mngr.*$*"
+      
+      SESIdentity:
+        - labdigitalbdb-transversales@yandex.com
+      
+      SecretsManagerSecret:
+        - property: "tag:aws:secretsmanager:owningService"
+          value: "events"
+      
+      # IaC VPC
+
+      EC2VPC:
+        - property: "tag:Product"
+          value: "sandbox_account"
+      
+      EC2RouteTable:
+        - property: "tag:Product"
+          value: "sandbox_account"
+        - property: "tag:Product"
+          value: "sandbox_account_manual"
+
+      EC2InternetGatewayAttachment:
+        - property: "tag:vpc:Product"
+          value: "sandbox_account"
+
+      EC2InternetGateway:
+        - property: "tag:Product"
+          value: "sandbox_account"
+
+      EC2VPCEndpoint:
+        - property: "tag:Product"
+          value: "sandbox_account"
+
+      EC2Subnet:
+        - property: "tag:Product"
+          value: "sandbox_account"
+
+      EC2SecurityGroup:
+        - property: "tag:Name"
+          value: "vpc-endpoint-execute-api"
+
+      EC2DHCPOption:
+        - property: "tag:Product"
+          value: "sandbox_account_manual" 
+
+      EC2DefaultSecurityGroupRule:
+        - property: "SecurityGroupId"
+          type: glob
+          value: "*sg-08818e414e03ae5e7*"
+        
+      EC2NetworkInterface:
+        - property: "VPC"
+          type: glob
+          value: "*vpc-05486e9c9e0e6c93c*"
